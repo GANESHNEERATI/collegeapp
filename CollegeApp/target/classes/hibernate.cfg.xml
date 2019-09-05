@@ -18,5 +18,6 @@
              <mapping class="com.college.web.model.ApplicationStatus"/>
               <mapping class="com.college.web.model.Courses"/>
                <mapping class="com.college.web.model.PlacementDetails"/>
+               <mapping class="com.college.web.model.StudentDetails"/>
     </session-factory>
 </hibernate-configuration>
