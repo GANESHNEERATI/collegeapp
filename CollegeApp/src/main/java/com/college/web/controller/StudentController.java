@@ -34,7 +34,7 @@ public class StudentController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	
-		
+		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
 		
 		String url=request.getParameter("pattern");
@@ -69,7 +69,7 @@ public class StudentController extends HttpServlet {
 			 ApplicantServices services=new ApplicantServices();
 			 ApplicationStatus status=services.getStatus(application_id);
 			 
-			 if(status!=null)
+			 if(status!=null&&status.getStatus().equals("approve"))
 			 {
 				 System.out.println("in status if");
 				 
@@ -79,7 +79,7 @@ public class StudentController extends HttpServlet {
 				 boolean result=ss.registerStudent(sd);
 				 if(result)
 				 {
-					 out.println("<h1 align='center'>Stuent Registres Sucessfully</h1>");
+					 out.println("<font color='red'><h1 align='center'>Stuent Registred Sucessfully</h1></font>");
 					 RequestDispatcher rd=request.getRequestDispatcher("studentreg.jsp");
 					 rd.include(request, response);
 					 
@@ -89,12 +89,20 @@ public class StudentController extends HttpServlet {
 				 else
 				 {
 					 
-					 out.println("<h3>Student Alredy exist");
+					 out.println("<font color='red'><h3 align='center'>Student Alredy exist</h3></font>");
 					 RequestDispatcher rd=request.getRequestDispatcher("studentreg.jsp");
 					 rd.include(request, response);
 					 
 				 }
 				 
+				 
+				 
+			 }
+			 else
+			 {
+				 out.println("<font color='red'><h3 align='center'>Your Appliction rejected so cannot register</h3></font>");
+				 RequestDispatcher rd=request.getRequestDispatcher("studentreg.jsp");
+				 rd.include(request, response);
 				 
 				 
 			 }

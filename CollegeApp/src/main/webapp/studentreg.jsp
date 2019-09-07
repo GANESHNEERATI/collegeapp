@@ -16,33 +16,18 @@ function m2()
 {
   alert("only characters allowed");
 }
-        function yourfunction(radioid)
-{
-if(radioid == 1)
-{    
-   	document.getElementById('one').style.display = 'block';
-    document.getElementById('two').style.display = 'none';
-	document.getElementById('three').style.display = 'none';
- }
- else if(radioid == 2)
-{  
-	document.getElementById('three').style.display = 'none';
-	document.getElementById('two').style.display = '';
-    document.getElementById('one').style.display = 'none';
+
+function submitForm() {
+document.stureg-form.submit();
+document.stureg-form.reset();
 }
- else if(radioid == 3)
-{  
-	
-	document.getElementById('three').style.display = '';
-	document.getElementById('two').style.display = 'none';
-    document.getElementById('one').style.display = 'none';
-}
-}
-    </script>
+
+</script>
+
 </head>
 <body>
 <h2 align="center">STUDENT REGISTRATION FORM</h2>
-<form action="addStudent" method="get"> 
+<form name="stureg-form" action="addStudent" method="get"> 
 <table align="center" cellpadding = "15">
 <!----- First Name ----------------------------------->
 <tr>
@@ -232,7 +217,7 @@ title="Must contain at least one number and one uppercase and lowercase letter, 
 <td>STREAM</td>
 
 <td>
-<div id="one" style="display: block;"> <br>
+<div > <br>
 
 <select  name="cvalue"  required>
 	<option value="-1">Select</option>
@@ -242,38 +227,22 @@ title="Must contain at least one number and one uppercase and lowercase letter, 
         <option value="ECE">Electronics Communication Engineering</option>
         <option value="EEE">Electrical Electronics Engineering</option>
 	 <option value="IT">Information Technology</option>
-        <option value="MECH">Mechanical Engineering</option> 		
-</select><br>
-</div>
-<div id="two" style="display: none;">
-<select  name="cvalue"  required>
-	<option value="-1">Select</option>
-        <option value="AERO">Aerospace Engineering</option>
-        <option value="CHEM">Chemical Engineering</option>
-        <option value="CIVIL">Civil Engineering</option>
-	<option value="CSE">Computer Science Engineering</option>
-	 <option value="EE">Electrical Engineering</option>
-	 <option value="IT">Information Technology</option>
         <option value="MECH">Mechanical Engineering</option> 
+        <option value="CHEM">Chemical Engineering</option>
         <option value="MET">Metallurgical Engineering</option>
- </select>
- </div>
- <div id="three" style="display:none">
-<select  name="cvalue"   required>
-	<option value="-1">Select</option>
         <option value="HR">Human Resource Management</option>
         <option value="FM">Finance Management</option>
         <option value="MM">Marketing Management</option>
-	 <option value="IT">IT Management</option>
- </select>
- </div>
+	 <option value="ITM">IT Management</option>
+</select>
+</div>
 </td>
 </tr>
  
 <!----- Submit and Reset ------------------------------------------------->
 <tr>
 <td colspan="2" align="center">
-<input type="submit" value="Submit">
+<input type="submit" value="Submit" onclick="submitForm()">
 <input type="reset" value="Reset">
 </td>
 </tr>
