@@ -27,7 +27,7 @@ document.stureg-form.reset();
 </head>
 <body>
 <h2 align="center">STUDENT REGISTRATION FORM</h2>
-<form name="stureg-form" action="addStudent" method="get"> 
+<form name="stureg-form" action="addStudent" method="post"> 
 <table align="center" cellpadding = "15">
 <!----- First Name ----------------------------------->
 <tr>

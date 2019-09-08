@@ -1,26 +1,32 @@
 package com.college.web.service;
 
+import java.util.List;
+
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import com.college.web.model.Admin;
-import com.college.web.model.StudentDetails;
+import com.college.web.model.AluminiDetails;
+import com.college.web.model.Applicant;
 import com.college.web.util.HibernateUtil;
 
-public class StudentServices {
+public class AluminiServices {
 
-	public boolean registerStudent(StudentDetails sd) {
+	public boolean addAlumini(AluminiDetails ad) {
 		// TODO Auto-generated method stub
-		Session session=HibernateUtil.openSession();
-		if(isStudentExists(sd)) return false;
 		
-
+		
+		Session session=HibernateUtil.openSession();
+		if(isAluminiExists(ad)) return false;
+		
+		
+		
 		Transaction tx = null;
 	     try {
 	         tx = session.getTransaction();
 	         tx.begin();
-	         session.saveOrUpdate(sd);       
+	         session.saveOrUpdate(ad);       
 	         tx.commit();
 	     } catch (Exception e) {
 	         if (tx != null) {
@@ -33,25 +39,17 @@ public class StudentServices {
 	   
 		
 		return true;
-		
-
-		
-		
 	}
-	private boolean isStudentExists(StudentDetails sd) {
-		// TODO Auto-generated method stub
-		
-		
-		
 
+	private boolean isAluminiExists(AluminiDetails ad) {
 		Session session = HibernateUtil.openSession();
 	     boolean result = true;
 	     Transaction tx = null;
 	     try{
 	         tx = session.getTransaction();
 	         tx.begin();
-	         Query query = session.createQuery("from StudentDetails where application_id='"+sd.getApplication_id()+"'");
-	         Admin u = (Admin)query.uniqueResult();
+	         Query query = session.createQuery("from AluminiDetails where studentid='"+ad.getStudentid()+"'");
+	         AluminiDetails u = (AluminiDetails)query.uniqueResult();
 	         tx.commit();
 	         if(u==null) result = false;
 	        	 
@@ -64,30 +62,29 @@ public class StudentServices {
 	     }
 	     return result;
 	}
-	public boolean authenticateStuent(String uname, String pass) {
+
+	public boolean authenticateAlumni(int sid1, String pass) {
 		// TODO Auto-generated method stub
-		
-		StudentDetails sd=getStudentbyPassword(pass);
-		if(sd!=null && sd.getUsername().equals(uname)&&sd.getPasssword().equals(pass)){
+		//System.out.println("all");
+		AluminiDetails al=getAlumniByAid(sid1);
+		//System.out.println(al);
+		if(al!=null&&al.getPass().equals(pass)){
+			//System.out.println("in au");
             return true;
         }else{
             return false;
         }
-		
-		
-		
-		
 	}
-	private StudentDetails getStudentbyPassword(String pass) {
-		// TODO Auto-generated method stub
+
+	private AluminiDetails getAlumniByAid(int sid1) {
 		Session session = HibernateUtil.openSession();
         Transaction tx = null;
-        StudentDetails sd = null;
+        AluminiDetails al = null;
         try { 
             tx = session.getTransaction();
             tx.begin();
-            Query query = session.createQuery("from StudentDetails where passsword='"+pass+"'");
-            sd = (StudentDetails)query.uniqueResult();
+            Query query = session.createQuery("from AluminiDetails where studentid='"+sid1+"'");
+            al = (AluminiDetails)query.uniqueResult();
             tx.commit();
         } catch (Exception e) {
             if (tx != null) {
@@ -97,11 +94,35 @@ public class StudentServices {
         } finally {
             session.close();
         }
-        return sd;
+        return al;
 	}
+	public List<AluminiDetails> getAllAlumini()
+	{
+		
+		
+		
+		Session session=HibernateUtil.openSession();
+		Transaction tx = null;
+		List<AluminiDetails>    ad=null;
+		 try {
+		
+	         tx = session.getTransaction();
+	         tx.begin();
+	         ad =session.createQuery("from AluminiDetails").list();    
+	      
 	
-	
-	
+	         tx.commit();
+	     } catch (Exception e) {
+	         if (tx != null) {
+	             tx.rollback();
+	         }
+	         e.printStackTrace();
+	     } finally {
+	         session.close();
+	     } 
+		
+		return ad;
+		
+	}
 
-	
 }

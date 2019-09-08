@@ -136,4 +136,11 @@ public class ApplicantServices {
 	
 	}
 
+
+	public boolean authenticateAlumni(int sid1, String pass) {
+		// TODO Auto-generated method stub
+		
+		return false;
+	}
+
 }

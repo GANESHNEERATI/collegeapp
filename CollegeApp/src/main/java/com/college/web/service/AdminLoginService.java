@@ -26,10 +26,10 @@ public class AdminLoginService {
 	}
 
 	private Admin getAdminByAid(String aid) {
-		 Session session = HibernateUtil.openSession();
+		Session session = HibernateUtil.openSession();
 	        Transaction tx = null;
 	        Admin admin = null;
-	        try {
+	        try { 
 	            tx = session.getTransaction();
 	            tx.begin();
 	            Query query = session.createQuery("from Admin where aid='"+aid+"'");

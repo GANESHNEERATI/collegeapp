@@ -89,6 +89,12 @@
   	<description></description>
   	<servlet-class>com.college.web.controller.StudentController</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>AluminiController</servlet-name>
+  	<display-name>AluminiController</display-name>
+  	<description></description>
+  	<servlet-class>com.college.web.controller.AluminiController</servlet-class>
+  </servlet>
 
   <servlet-mapping>
   	<servlet-name>ApplicantController</servlet-name>
@@ -146,8 +152,15 @@
   <servlet-mapping>
   	<servlet-name>StudentController</servlet-name>
   	<url-pattern>/addStudent</url-pattern>
+  	<url-pattern>/studentlogin</url-pattern>
+  	<url-pattern>/StudentLogout</url-pattern>
+  	</servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AluminiController</servlet-name>
+  	<url-pattern>/registerAlumni</url-pattern>
+  	<url-pattern>/aluminiLogin</url-pattern>
   </servlet-mapping>
-  
+   
   <welcome-file-list>
   <welcome-file>/Welcome.html</welcome-file>
   

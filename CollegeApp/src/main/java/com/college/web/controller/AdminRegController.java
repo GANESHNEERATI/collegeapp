@@ -49,7 +49,7 @@ public class AdminRegController extends HttpServlet {
         out.println("<center>");
         if(result){
             out.println("<h1>Ad registred  Sucessfully :</h1>");
-            out.println("To login with new AdminId and Password<a href=AdminLogin.html>Click here</a>");
+            out.println("To login with new AdminId and Password<a href=AdminLogin.jsp>Click here</a>");
         }
         else{
             out.println("<h1>Registration Failed</h1>");

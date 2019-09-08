@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.college.web.model.ApplicationStatus;
 import com.college.web.model.StudentDetails;
@@ -31,7 +32,7 @@ public class StudentController extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	
 		response.setContentType("text/html");
@@ -71,7 +72,7 @@ public class StudentController extends HttpServlet {
 			 
 			 if(status!=null&&status.getStatus().equals("approve"))
 			 {
-				 System.out.println("in status if");
+				// System.out.println("in status if");
 				 
 				 
 				 StudentDetails sd=new StudentDetails(First_name, Last_name, dob, application_id, email, Mobile_no, gender, Username, passsword, Address, City, pincode, State, country, Highest_qualification, percentage, course, Stream);
@@ -106,6 +107,43 @@ public class StudentController extends HttpServlet {
 				 
 				 
 			 }
+			 break;
+		case "StudentLogin":
+			
+			StudentServices ss=new StudentServices();
+			
+			String uname=request.getParameter("u_name");
+			String pass=request.getParameter("p_word");
+			//System.out.println(uname+" "+pass);
+			boolean result=ss.authenticateStuent(uname,pass);
+			if(result)
+			{
+				//System.out.println("true");
+			    request.getSession().setAttribute("user", uname);      
+			    response.sendRedirect("Studenthome.jsp");
+			}
+			else
+			{
+				out.println("<font color='red'><h3 align='center'>your login was unsucessfull please check your username and password</h3></font");
+				RequestDispatcher rd=request.getRequestDispatcher("StudentLogin.jsp");
+				rd.include(request, response);
+				
+			}
+			break;
+		case "StudentLogout":
+			//System.out.println("in student logout");
+			
+			  HttpSession session=request.getSession();
+	           session.removeAttribute("user");
+	           session.invalidate();
+	           response.sendRedirect("StudentLogin.jsp");
+			
+			break;
+			
+			
+			
+			
+			
 			 
 			 
 			 
