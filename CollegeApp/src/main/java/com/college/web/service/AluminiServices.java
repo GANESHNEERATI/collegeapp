@@ -125,4 +125,30 @@ public class AluminiServices {
 		
 	}
 
+	public List<AluminiDetails> getAluminiByName(String alumininame) {
+
+		Session session=HibernateUtil.openSession();
+		Transaction tx = null;
+		List<AluminiDetails>    ad=null;
+		 try {
+		
+	         tx = session.getTransaction();
+	         tx.begin();
+	         ad =session.createQuery("from AluminiDetails where First_name="+alumininame+"or Last_name"+alumininame).list();    
+	      
+	
+	         tx.commit();
+	     } catch (Exception e) {
+	         if (tx != null) {
+	             tx.rollback();
+	         }
+	         e.printStackTrace();
+	     } finally {
+	         session.close();
+	     } 
+		
+		return ad;
+		
+	}
+
 }

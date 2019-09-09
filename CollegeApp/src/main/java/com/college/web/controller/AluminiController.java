@@ -2,6 +2,7 @@ package com.college.web.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 import javax.print.attribute.standard.PrinterInfo;
 import javax.servlet.RequestDispatcher;
@@ -106,6 +107,17 @@ public class AluminiController extends HttpServlet {
 			
 			
 		}
+		break;
+	case "getaluminibyname":
+		
+		String alumininame=request.getParameter("name");
+		AluminiServices service1=new AluminiServices();
+		List<AluminiDetails> ad1=service1.getAluminiByName(alumininame);
+		if(ad1!=null)
+		{
+			System.out.println(ad1);
+		}
+		
 		
 		
 		

@@ -159,6 +159,7 @@
   	<servlet-name>AluminiController</servlet-name>
   	<url-pattern>/registerAlumni</url-pattern>
   	<url-pattern>/aluminiLogin</url-pattern>
+  	<url-pattern>/getaluminibyname</url-pattern>
   </servlet-mapping>
    
   <welcome-file-list>
