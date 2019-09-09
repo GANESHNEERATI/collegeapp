@@ -24,7 +24,7 @@
 <tr>
 <td colspan="4" align="center">
 <input type="submit" value="Login"><br><br>
-<a href="file:///C:/Users/Admin/Desktop/s-forgot-pass.html">I forgot my password</a>
+<a href="#">I forgot my password</a>
 </td>
 </tr>
 </table>

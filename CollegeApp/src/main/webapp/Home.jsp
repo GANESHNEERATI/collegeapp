@@ -16,24 +16,24 @@
 
 </head>
 <body>
+<jsp:include page="collegehedder.jsp"></jsp:include>
 <div class="page">
-<div class="headerpart">
-<image src="http://internationaleducationmedia.com/india/images/jbiet_logo.jpg"></div>
+
 <div class="linkspart">
 <center>
 <font size=6px>
-<a href="Home.html">HOME  </a>&nbsp
+<a href="#">HOME  </a>&nbsp
 <a href="Admin.html"> ADMIN </a>&nbsp
 <a href="Student.html"> STUDENT </a>&nbsp
-<a href="Administration.html"> ADMNISTRATION </a>&nbsp
+<a href="Faculty.html"> FACULTY </a>&nbsp
 <a href="Alumni.html"> ALUMNI </a>&nbsp
 </font>
 </center></div>
 <div class="bodypart">
 <div class="imagepart ">
 <div class="w3-content w3-display-container">
-  <img class="mySlides" src="https://image.shutterstock.com/image-photo/mountains-during-sunset-beautiful-natural-600w-407021107.jpg" style="height:80%;width:100%">
-  <img class="mySlides" src="https://image.shutterstock.com/image-photo/autumn-forest-nature-vivid-morning-600w-766886038.jpg" style="height:80%;width:100%">
+  <img class="mySlides" src="https://www.jntufastupdates.com/wp-content/uploads/2019/04/jntu-hyderabad.jpg" style="height:100%;width:100%">
+  <img class="mySlides" src="http://jntuhweb.in/images/jntu_video.jpg" style="height:50%;width:97%">
   
 
   <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>

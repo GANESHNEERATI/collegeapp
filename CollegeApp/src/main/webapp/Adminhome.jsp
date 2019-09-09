@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@include file="AdminSecurity.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,17 +49,6 @@ li a:hover:not(.active) {
 </head>
 <body>
 
-
-<% 
-response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); 
-
-if(session.getAttribute("user")==null)
-	response.sendRedirect("AdminLogin.jsp");
-
-String user=(String)session.getAttribute("user");
-session.setAttribute("user", user);
-
-%>
 <ul>
   <li><a href="<%=request.getContextPath()%>//ApplicantViewController">Applicationsview</a></li>
   <li><a href="CourseAssign.jsp">CourseAssign</a></li>

@@ -22,6 +22,7 @@
 
 </head>
 <body>
+<jsp:include page="collegehedder.jsp"/>
 <center><h1>ADD COURSE</h1></center>
 <div class="boxed">
 <form action="updatecourse" method="post">
@@ -63,6 +64,7 @@
 </form>
 
 </div>
+<jsp:include page="footer.jsp"/>
 
 </body>
 </html>
