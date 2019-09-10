@@ -129,13 +129,13 @@ public class AluminiServices {
 
 		Session session=HibernateUtil.openSession();
 		Transaction tx = null;
-		List<AluminiDetails>    ad=null;
+		List<AluminiDetails>  ad=null;
 		 try {
 		
 	         tx = session.getTransaction();
 	         tx.begin();
-	         ad =session.createQuery("from AluminiDetails where First_name="+alumininame+"or Last_name"+alumininame).list();    
-	      
+	        ad =session.createQuery("from AluminiDetails where firstname='"+alumininame+"'").list();    
+	       //  ad= (AluminiDetails)query.uniqueResult();
 	
 	         tx.commit();
 	     } catch (Exception e) {

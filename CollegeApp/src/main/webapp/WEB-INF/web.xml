@@ -160,6 +160,7 @@
   	<url-pattern>/registerAlumni</url-pattern>
   	<url-pattern>/aluminiLogin</url-pattern>
   	<url-pattern>/getaluminibyname</url-pattern>
+  	<url-pattern>/AluminiLogout</url-pattern>
   </servlet-mapping>
    
   <welcome-file-list>

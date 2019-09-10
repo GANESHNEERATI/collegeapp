@@ -1,14 +1,11 @@
-<%@page import="com.college.web.service.AluminiServices"%>
-<%@page import="com.college.web.model.AluminiDetails"%>
-<%@ page import="com.college.*,java.util.*"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-   <%@include file="AluminiSecurity.jsp" %>
-    
-<!DOCTYPE html>
+    <%@page import="com.college.web.model.AluminiDetails"%>
+    <%@ page import="com.college.*,java.util.*"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -20,16 +17,19 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+
 <jsp:include page="collegehedder.jsp"></jsp:include>
-
 <%
-AluminiServices services=new AluminiServices();
-List<AluminiDetails> ad=services.getAllAlumini();
-%>
 
+List<AluminiDetails> add=(List<AluminiDetails>)request.getSession().getAttribute("al");
+
+
+
+
+%>
 <div class="jumbotron jumbotron-red">
   <div class="container">
-   <h1><center>All Alumni</center></h1> 
+   <h1><center>All Searched Records</center></h1> 
   </div>
 </div>
 <div style="top: 150px">
@@ -48,7 +48,7 @@ List<AluminiDetails> ad=services.getAllAlumini();
 						</thead>
 			<tbody>
 				<%
-					for (AluminiDetails ar : ad) {
+					for (AluminiDetails ar : add) {
 				%>
 
 				<tr>
@@ -83,7 +83,6 @@ List<AluminiDetails> ad=services.getAllAlumini();
 
 
 	</div>
-<jsp:include page="footer.jsp"></jsp:include>
-
+	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

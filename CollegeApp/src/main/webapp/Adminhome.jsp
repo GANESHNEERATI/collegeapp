@@ -48,6 +48,7 @@ li a:hover:not(.active) {
 </style>
 </head>
 <body>
+<jsp:include page="collegehedder.jsp"></jsp:include>
 
 <ul>
   <li><a href="<%=request.getContextPath()%>//ApplicantViewController">Applicationsview</a></li>

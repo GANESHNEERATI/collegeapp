@@ -38,6 +38,9 @@ public class AluminiController extends HttpServlet {
 	PrintWriter out=response.getWriter();
 	String url=request.getParameter("pattern");
 	
+	if(url!=null)
+	{
+	
 	switch(url)
 	{
 	case "addAlumini":
@@ -62,7 +65,7 @@ public class AluminiController extends HttpServlet {
 		boolean result=ser.addAlumini(ad);
 		if(result&&status.getStatus().equals("approve"))
 		{
-			out.println("<font color='red'><h3 align='center'>REGISTRED SUCCESSFULLY TO LOGIN <a href='AlumniLogin,jsp'>Click here</a></h3></font>");
+			out.println("<font color='red'><h3 align='center'>REGISTRED SUCCESSFULLY TO LOGIN <a href='AlumniLogin.jsp'>Click here</a></h3></font>");
 			RequestDispatcher rd=request.getRequestDispatcher("AluminiRegistration.jsp");
 			rd.include(request, response);
 			
@@ -101,7 +104,7 @@ public class AluminiController extends HttpServlet {
 		}
 		else
 		{
-			out.println("<font color='red'><h1 align='center'>invalid username and passwor</h1></font>");
+			out.println("<font color='red'><h1 align='center'>invalid username and password</h1></font>");
 			request.getRequestDispatcher("AluminiLogin.jsp").include(request, response);
 			
 			
@@ -112,14 +115,25 @@ public class AluminiController extends HttpServlet {
 		
 		String alumininame=request.getParameter("name");
 		AluminiServices service1=new AluminiServices();
-		List<AluminiDetails> ad1=service1.getAluminiByName(alumininame);
+		List<AluminiDetails>ad1=service1.getAluminiByName(alumininame);
 		if(ad1!=null)
 		{
-			System.out.println(ad1);
+			request.getSession().setAttribute("al", ad1);
+			request.getRequestDispatcher("ViewAluminiwithName.jsp").forward(request, response);;
+			
 		}
 		
+			
+			
+			
+			
 		
 		
+		break;
+		
+		
+			
+			
 		
 		
 		
@@ -128,6 +142,13 @@ public class AluminiController extends HttpServlet {
 	
 	
 	
+	}
+	}
+	else
+	{
+		request.getSession().getAttribute("user");
+		
+		
 	}
 	
 	

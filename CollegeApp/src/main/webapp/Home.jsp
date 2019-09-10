@@ -23,10 +23,10 @@
 <center>
 <font size=6px>
 <a href="#">HOME  </a>&nbsp
-<a href="Admin.html"> ADMIN </a>&nbsp
+<a href="#"> ADMIN </a>&nbsp
 <a href="Student.html"> STUDENT </a>&nbsp
 <a href="Faculty.html"> FACULTY </a>&nbsp
-<a href="Alumni.html"> ALUMNI </a>&nbsp
+<a href="Alumni.jsp"> ALUMNI </a>&nbsp
 </font>
 </center></div>
 <div class="bodypart">

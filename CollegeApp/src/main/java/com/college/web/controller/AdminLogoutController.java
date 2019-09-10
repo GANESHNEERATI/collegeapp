@@ -31,7 +31,7 @@ public class AdminLogoutController extends HttpServlet {
            HttpSession session=request.getSession();
            session.removeAttribute("user");
            session.invalidate();
-           response.sendRedirect("AdminLogin.jsp");
+           response.sendRedirect("Alumni.jsp");
            
            
 	

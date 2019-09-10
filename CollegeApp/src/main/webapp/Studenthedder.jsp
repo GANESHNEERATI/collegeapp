@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+ <%@include file="StudentSecurity.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +14,10 @@ document.getElementById("myform").submit();
 
 }
 </script>
+
+
+
+
 </head>
 <body>
 <a href="ViewClasses.jsp">view classes</a>
