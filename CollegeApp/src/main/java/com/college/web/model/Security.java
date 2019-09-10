@@ -12,7 +12,6 @@ import org.hibernate.annotations.NotFound;
 public class Security {
  
 @Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
 private 	String key;
 
 public String getKey() {

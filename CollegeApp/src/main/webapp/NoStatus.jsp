@@ -8,7 +8,7 @@
 </head>
 <body>
 <%
-Integer a=(Integer)request.getAttribute("statusobj");
+int a=(Integer)request.getAttribute("statusobj");
 %>
 <div align="center">
 <h1> <%=a%>Not Found</h1>

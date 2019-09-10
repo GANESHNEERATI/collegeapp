@@ -70,11 +70,15 @@ li a:hover:not(.active) {
   </div>
   
 </div>
+<div style="height:200px">
+
+
+</div>
 
 
 
 
-
+<jsp:include page="footer.jsp"></jsp:include>
 
 
 </body>

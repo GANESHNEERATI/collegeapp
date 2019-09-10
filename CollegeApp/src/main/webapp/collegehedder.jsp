@@ -23,7 +23,7 @@
 <body>
 <div class="headerpart">
 <div style="float:left">
-<image src="http://jntuhresults.in/images/logo.jpg"  height="115" width="150">
+<image src="http://jntuhresults.in/images/logo.jpg"  height="110" width="150">
 </div>
 <div  style="float:center">
 

@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,13 +7,13 @@
 
 </head><style type="text/css">
 .page{
-	width:1316px;
-	height:1054px;
+	width:1322px;
+	height: 922px;;
 	border-style:groove;
 }
 
 .linkspart{
-        width:992pxpx;
+        width:1277px;
 	    height:20px;
         margin-top:2px;
      	border-style:groove;
@@ -31,37 +30,29 @@
        }</style>
 <body>
 <jsp:include page="collegehedder.jsp"></jsp:include>
-
 <div class="page">
-
-<div class="news">
-
-
-
-
-</div>
 <div class="linkspart">
 <center>
-<font size=3px>
-<a href="Shome.html">HOME</a>&nbsp
-<a href="studentreg.jsp">REGISTRATION </a>&nbsp
-
-<a href="Examinations.html">EXAMINATIONS</a>&nbsp
-<a href="results.html">RESULTS </a>&nbsp
-<a href="Events.html">EVENTS </a>&nbsp
-<a href="ViewStudentPlacements.jsp">PLACEMENTDETAILS </a>&nbsp
-<a href="Alumni.jsp">ALUMNIDETAILS </a>&nbsp
-<a href="Upload.html">UPLOAD</a>&nbsp
-<a href="Download.html">DOWNLOAD </a>&nbsp
-<a href="ViewCourses.jsp">CLASSES </a>&nbsp
+<font size=4px>
+<a href="Home.jsp">HOME</a>&nbsp
+<a href="reg.jsp">APPLY</a>&nbsp
+<a href="ApplicationStatus.jsp"> VIEW STATUS </a>&nbsp
 
 
 </center>
-<jsp:include page="StudentLogin.jsp"></jsp:include>
+
 
 
 </font>
+</div>
+<div class="in" style="height: 809px">
+<h1 align="center">Online Applications Accepted sonn Please stay connect with us</h1>
+
+</div>
+
 <jsp:include page="footer.jsp"></jsp:include>
+</div>
+
 
 </body>
 </html>

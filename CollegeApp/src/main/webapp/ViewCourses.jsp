@@ -20,6 +20,8 @@
 
 </head>
 <body>
+
+<jsp:include page="collegehedder.jsp"></jsp:include>
 <%
 response.setIntHeader("Refresh", 1);
 AdminLoginService al=new AdminLoginService();
@@ -125,7 +127,7 @@ List<Courses> courses=al.viewAllCourses();
 		</table>
 
 
-
+<jsp:include page="footer.jsp"></jsp:include>
 
 	</div>
 

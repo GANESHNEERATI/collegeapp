@@ -164,7 +164,7 @@
   </servlet-mapping>
    
   <welcome-file-list>
-  <welcome-file>/Welcome.html</welcome-file>
+  <welcome-file>/Home.jsp</welcome-file>
   
   
   </welcome-file-list>
