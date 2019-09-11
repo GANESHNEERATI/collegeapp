@@ -1,4 +1,4 @@
-h3{
+h2{
   font-family: Calibri; 
   font-size: 25pt;         
   font-style: normal; 
@@ -6,6 +6,7 @@ h3{
   color:SlateBlue;
   text-align: center; 
   text-decoration: underline
+  
 }
 
 table{
@@ -15,7 +16,7 @@ table{
   font-style: normal;
   font-weight: bold;
   text-align:; 
-  background-color: SlateBlue; 
+  background-color: #9e6eba; 
   border-collapse: collapse; 
   border: 2px solid navy
 }

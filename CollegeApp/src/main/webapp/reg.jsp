@@ -10,7 +10,8 @@
 
 </head>
 <body>
-<h3>STUDENT REGISTRATION FORM</h3>
+<jsp:include page="collegehedder.jsp"></jsp:include>
+<h2 align="center">STUDENT APPLICATION  FORM</h3>
 
 <form action="register" method="POST">
 <table align="center" cellpadding = "10">
@@ -133,13 +134,13 @@ B.Tech
 <td>
 CSE
 <input type="radio" name="Stream" value="Cse">
-B.Com
+EEE
 <input type="radio" name="Stream" value="EEE">
-B.Sc
+ECE
 <input type="radio" name="Stream" value="ECE">
-B.A
+MECH
 <input type="radio" name="Stream" value="MECH">
-B.Tech
+CIVIL
 <input type="radio" name="Stream" value="CIVIL">
 (if course is Btech)
 </td>
@@ -155,6 +156,7 @@ B.Tech
 </table>
  
 </form>
+<jsp:include page="footer.jsp"></jsp:include>
 
 </body>
 </html>

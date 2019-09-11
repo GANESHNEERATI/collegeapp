@@ -7,15 +7,20 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
-int a=(Integer)request.getAttribute("statusobj");
-%>
+
 <div align="center">
-<h1> <%=a%>Not Found</h1>
+<jsp:include page="collegehedder.jsp"></jsp:include>
+<h1>Application Status</h1>
+<h1> your Application is processing</h1>
+
+
+</div>
+<div style="height: 300px">
+
 
 
 </div>
 
-
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

@@ -26,7 +26,7 @@ List<PlacementDetails> pd=services.getAllPlacements();
 
 %>
 
-</body>
+<jsp:include page="collegehedder.jsp"></jsp:include>
 
 <div class="jumbotron jumbotron-red">
   <div class="container">
@@ -104,8 +104,9 @@ List<PlacementDetails> pd=services.getAllPlacements();
 
 
 	</div>
+	<jsp:include page="footer.jsp"></jsp:include>
 
-
+</body>
 
 
 

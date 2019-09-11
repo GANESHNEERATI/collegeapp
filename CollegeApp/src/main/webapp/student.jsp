@@ -43,7 +43,7 @@
 <div class="linkspart">
 <center>
 <font size=3px>
-<a href="Shome.html">HOME</a>&nbsp
+<a href="Home.jsp">HOME</a>&nbsp
 <a href="studentreg.jsp">REGISTRATION </a>&nbsp
 
 <a href="Examinations.html">EXAMINATIONS</a>&nbsp

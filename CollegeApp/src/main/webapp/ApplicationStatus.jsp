@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<jsp:include page="collegehedder.jsp"></jsp:include>
 
 <div align="center" style="top: 800%;" >
 <table>
@@ -20,9 +21,23 @@
 
 
 
+
+
+
+
 </table>
 
-</div> 
+</div>
+<div style="height: 350px">
+
+
+
+
+</div>
+
+
+
+<jsp:include page="footer.jsp"></jsp:include>
 
 
 </body>

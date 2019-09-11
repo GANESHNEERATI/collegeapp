@@ -39,7 +39,7 @@
 <font size=5px>
 <a href="Home.jsp">HOME</a>&nbsp
 <a href="allAluminidetails.jsp">All Alumnidetails</a>&nbsp
-<a href="<%=request.getContextPath()%>//AluminiLogout">Logout</a>&nbsp
+<a href="<%=request.getContextPath()%>//alumniologout">Logout</a>&nbsp
 
 
 </center>

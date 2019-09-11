@@ -34,7 +34,7 @@
 <center>
 <font size=5px>
 <a href="Shome.html">HOME</a>&nbsp
-<a href="Sregistration.html"> Alumini REGISTRATION </a>&nbsp
+<a href="AluminiRegistration.jsp"> Alumini REGISTRATION </a>&nbsp
 
 
 </center>

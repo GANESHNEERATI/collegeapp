@@ -16,6 +16,9 @@
         background-image:url("./images/image.jpg");
         background-repeat:no-repeat;
             }
+            #aa{
+            color:#d61181      
+            }
 
 
 </style>
@@ -29,7 +32,7 @@
 
 <center>
 <font color="#d61181"><h1>Jawaharlal Nehru Technological University</h1></font>
-<font color="#d61181"><h3>Kukatpally,Hyderabad,Telangana-500085</h3></font>
+<h3 id="aa">Kukatpally,Hyderabad,Telangana-500085</h3>
 </center>
 </div>
 </div>

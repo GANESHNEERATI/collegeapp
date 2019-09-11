@@ -95,6 +95,13 @@
   	<description></description>
   	<servlet-class>com.college.web.controller.AluminiController</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>AluminiLogoutController</servlet-name>
+  	<display-name>AluminiLogoutController</display-name>
+  	<description></description>
+  	<servlet-class>com.college.web.controller.AluminiLogoutController</servlet-class>
+  </servlet>
+  
 
   <servlet-mapping>
   	<servlet-name>ApplicantController</servlet-name>
@@ -162,6 +169,11 @@
   	<url-pattern>/getaluminibyname</url-pattern>
   	<url-pattern>/AluminiLogout</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AluminiLogoutController</servlet-name>
+  	<url-pattern>/alumniologout</url-pattern>
+  </servlet-mapping>
+
    
   <welcome-file-list>
   <welcome-file>/Home.jsp</welcome-file>

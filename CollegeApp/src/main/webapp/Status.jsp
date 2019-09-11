@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<jsp:include page="collegehedder.jsp"></jsp:include>
 
 <%
 ApplicationStatus status=(ApplicationStatus)request.getSession().getAttribute("statusobj");
@@ -38,7 +39,13 @@ ApplicationStatus status=(ApplicationStatus)request.getSession().getAttribute("s
 
 
 </div>
+<div style="height:250px">
 
 
+
+
+</div>
+
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

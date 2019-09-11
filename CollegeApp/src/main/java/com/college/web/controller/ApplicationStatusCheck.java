@@ -43,7 +43,7 @@ public class ApplicationStatusCheck extends HttpServlet {
 	
 	if(status==null)
 	{
-		request.setAttribute("aid", aid);
+		//request.setAttribute("aid", aid);
 		request.getRequestDispatcher("NoStatus.jsp").forward(request, response);;
 		
 	}

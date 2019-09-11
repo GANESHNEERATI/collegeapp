@@ -77,12 +77,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 border-radius: 50%}
 
-
+</style>
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
        
-       </style>
+       
 </head>
 <body>
 <jsp:include page="collegehedder.jsp"></jsp:include>

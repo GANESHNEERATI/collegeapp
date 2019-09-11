@@ -26,8 +26,10 @@ document.stureg-form.reset();
 
 </head>
 <body>
+<jsp:include page="collegehedder.jsp"></jsp:include>
+<div style="background-color: #b4edea;"">
 <h2 align="center">STUDENT REGISTRATION FORM</h2>
-<form name="stureg-form" action="addStudent" method="post"> 
+<form name="stureg-form" action="addStudent" method="post" "> 
 <table align="center" cellpadding = "15">
 <!----- First Name ----------------------------------->
 <tr>
@@ -249,5 +251,7 @@ title="Must contain at least one number and one uppercase and lowercase letter, 
 </table>
  
 </form>
+</div>
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
