@@ -22,7 +22,7 @@ function m2() {
 <jsp:include page="collegehedder.jsp"></jsp:include>
 <div style="background-color: aquamarine;">
 <h2 align="center"> FACULTY REGISTRATION FORM </h2>
-<form action="">
+<form action="addFaculty" method="post">
 <table align="center" cellpadding="15">
 <!------------ First Name---------->
 <tr>
@@ -225,7 +225,7 @@ required title="Must contain at least one number and one uppercase and lowercase
 
 
 
-
+<input type="hidden" name="pattern" value="addFaculty">
 
 </td>
 </tr>
