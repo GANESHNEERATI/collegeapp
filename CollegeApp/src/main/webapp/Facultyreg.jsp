@@ -196,9 +196,9 @@ required title="Must contain at least one number and one uppercase and lowercase
 <!-----------Teching Domain---------->
 <tr>
 <td> DEPARTMENT </td>
-<td ><input type="radio" id="course1" name="degree" onclick="ShowBtech()" required />B.Tech/BE
-<input type="radio" id="course2" name="degree" onclick="ShowMtech()" required />M.Tech
-  <input type="radio" id="course3" name="degree" onclick="ShowMba()" required />MBA</td>
+<td ><input type="radio" name="degree" value="BE/BTECH" required />B.Tech/BE
+<input type="radio"  name="degree"  value="M.tech" required />M.Tech
+  <input type="radio"  name="degree" value="MBA" required />MBA</td>
 </tr>
 
 <tr>

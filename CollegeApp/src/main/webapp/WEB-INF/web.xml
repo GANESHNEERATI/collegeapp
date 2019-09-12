@@ -107,6 +107,12 @@
   	<description></description>
   	<servlet-class>com.college.web.controller.FacultyController</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>FacultyLogoutController</servlet-name>
+  	<display-name>FacultyLogoutController</display-name>
+  	<description></description>
+  	<servlet-class>com.college.web.controller.FacultyLogoutController</servlet-class>
+  </servlet>
   
 
   <servlet-mapping>
@@ -182,6 +188,12 @@
   <servlet-mapping>
   	<servlet-name>FacultyController</servlet-name>
   	<url-pattern>/addFaculty</url-pattern>
+  	<url-pattern>/FacultyLogin</url-pattern>
+  	
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>FacultyLogoutController</servlet-name>
+  	<url-pattern>/FacultyLogout</url-pattern>
   </servlet-mapping>
 
    

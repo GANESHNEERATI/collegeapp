@@ -1,6 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+\<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,13 +7,13 @@
 
 </head><style type="text/css">
 .page{
-	width:1316px;
-	height:1054px;
+	width:1318px;
+	height:700;
 	border-style:groove;
 }
 
 .linkspart{
-        width:992pxpx;
+        width:1312px;
 	    height:20px;
         margin-top:2px;
      	border-style:groove;
@@ -31,30 +30,21 @@
        }</style>
 <body>
 <jsp:include page="collegehedder.jsp"></jsp:include>
-
 <div class="page">
-
-<div class="news">
-
-
-
-
-</div>
 <div class="linkspart">
 <center>
 <font size=3px>
-<a href="Home.jsp">HOME</a>&nbsp
-<a href="studentreg.jsp">REGISTRATION </a>&nbsp
-
-
+<a href="Fhome.html">HOME</a>&nbsp
+<a href="Fregistration.html">REGISTRATION </a>&nbsp
 
 
 </center>
-<jsp:include page="StudentLogin.jsp"></jsp:include>
 
-
+<jsp:include page="FacultyLogin.jsp"></jsp:include>
 </font>
-<jsp:include page="footer.jsp"></jsp:include>
+</div>
+</div>
 
 </body>
+<jsp:include page="footer.jsp"></jsp:include>
 </html>

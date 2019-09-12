@@ -4,12 +4,12 @@
 		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.password">root</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/postgres</property>
-        <property name="hibernate.connection.username">postgres</property>
-        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
-        <property name="hbm2ddl.auto">create</property>
+       <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">1</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ganesh</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hbm2ddl.auto">update</property>
         <property name="hibernate.connection.pool_size">50</property>
         
         <mapping class="com.college.web.model.Applicant" />
@@ -20,5 +20,7 @@
                <mapping class="com.college.web.model.PlacementDetails"/>
                <mapping class="com.college.web.model.StudentDetails"/>
                <mapping class="com.college.web.model.AluminiDetails"/>
+                <mapping class="com.college.web.model.Faculty"/>
+               
     </session-factory>
 </hibernate-configuration>
